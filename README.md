@@ -1,4 +1,4 @@
-# hack-chat simple-bot
+# hack-chat.simple-bot
 本机器人是基于WebSocket协议开发的Hack.Chat聊天辅助工具，提供消息管理、用户统计、命令系统等功能，直接在控制台运行，无需依赖。
 
 # 功能：
