@@ -10,6 +10,6 @@
 
 # 使用方法
 <li>打开浏览器控制台</li>
-<li>找到这里：*channel: "room",*， 其中*room*为房间名，可自定义</li>
-<li>找到这里：*botName: "bot_",*， 其中*bot_*为bot名，可自定义</li>
+<li>找到这里： channel: "room",  其中*room*为房间名，可自定义</li>
+<li>找到这里： botName: "bot_",  其中*bot_*为bot名，可自定义</li>
 <li>按回车即可运行</li>
