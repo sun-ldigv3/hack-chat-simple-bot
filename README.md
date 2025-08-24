@@ -1,2 +1,2 @@
-# hack-chat-simple-bot
-hack-chat bot
+# hack-chat simple-bot
+
