@@ -10,6 +10,7 @@
 
 # 使用方法
 <li>打开浏览器控制台</li>
+<li>将 bot.js 里的代码直接粘贴进去</li>
 <li>找到这里： channel: "room",  其中 room 为房间名，可自定义（不要带"?"）</li>
 <li>找到这里： botName: "bot_",  其中 bot_ 为bot名，可自定义</li>
 <li>按回车即可运行</li>
