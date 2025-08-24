@@ -1,8 +1,7 @@
-
 (function(){
   const CONFIG = {
     server: "wss://hack.chat/chat-ws",
-    channel: "?room",
+    channel: "room",
     botName: "bot_",
     commands: {
       help: "!help",
@@ -168,3 +167,4 @@
 
   bot.init();
 })();
+
