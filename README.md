@@ -18,13 +18,18 @@
 # lounge_bot
 
 <li>在 bot.js 的基础上新增特殊命令</li>
-分别为：
+<li>分别为：</li>
 <li>!s xxx 禁言某人</li>
 <li>!t xxx 取消禁言某人</li>
 <li>!con xxx 控制bot输出 xxx</li>
-需将代码中类似于这样的：
-``` javascript
-const authCode = msg.nick.startsWith('sun') ? 'sun' : null;
 
+需将代码中类似于这样的：
+
+ ``` javascript
+ const authCode = msg.nick.startsWith('sun') ? 'sun' : null;
+  
+  if(authCode === 'sun') {
+    this.silencedUsers.set(targetUser, true);
+```
 所有 sun 改为其他的，如全部改为 123 ，
-则所以名称最前面有 123 的用户有权限使用特殊命令
+这种情况下所有名称最前面有 123 的用户都有权限使用特殊命令
