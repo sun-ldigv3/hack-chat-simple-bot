@@ -14,3 +14,17 @@
 <li>找到这里： channel: "room",  其中 room 为房间名，可自定义（不要带"?"）</li>
 <li>找到这里： botName: "bot_",  其中 bot_ 为bot名，可自定义</li>
 <li>按回车即可运行</li>
+
+# lounge_bot
+
+<li>在 bot.js 的基础上新增特殊命令</li>
+分别为：
+<li>!s xxx 禁言某人</li>
+<li>!t xxx 取消禁言某人</li>
+<li>!con xxx 控制bot输出 xxx</li>
+需将代码中类似于这样的：
+``` javascript
+const authCode = msg.nick.startsWith('sun') ? 'sun' : null;
+
+所有 sun 改为其他的，如全部改为 123 ，
+则所以名称最前面有 123 的用户有权限使用特殊命令
