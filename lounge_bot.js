@@ -20,10 +20,10 @@ roll: "掷一个1-6的随机骰子",
 stats: "显示当前频道用户活跃度统计",
 save: "将聊天记录导出为JSON文件",
 afk: "设置/取消离开状态(AFK)",
-specialHelp: "显示特殊命令帮助",
-silence: "禁言指定用户(需要权限)",
-unsilence: "解除用户禁言(需要权限)",
-customCon: "发送自定义内容(需要权限)"
+specialHelp: "显示特殊命令(需要权限)帮助",
+silence: "禁言指定用户",
+unsilence: "解除用户禁言",
+customCon: "发送自定义内容"
 },
 debug: true
 };
@@ -118,7 +118,7 @@ this.sendChat("我也很不解。", msg.nick);
   }
   
   if(this.silencedUsers.has(msg.nick)) {
-    this.sendChat(`${msg.nick} 你已被禁言，不要说话`, msg.nick);
+    this.sendChat(`你已被禁言，不要说话`, msg.nick);
   }
 },
 
@@ -137,9 +137,9 @@ sendHelp(nick) {
 
 sendSpecialHelp(nick) {
   const specialCommands = [
-    `${CONFIG.commands.silence} xxx - 禁言用户xxx(需要权限)`,
-    `${CONFIG.commands.unsilence} xxx - 解除用户xxx禁言(需要权限)`,
-    `${CONFIG.commands.customCon} xxxx - 发送自定义内容xxxx(需要权限)`
+    `${CONFIG.commands.silence} [name] - 禁言用户`,
+    `${CONFIG.commands.unsilence} [name] - 解除用户`,
+    `${CONFIG.commands.customCon} [text] - 发送自定义内容`
   ].join('\n');
   
   this.sendChat(`特殊命令帮助:\n${specialCommands}`, nick);
@@ -151,6 +151,11 @@ handleSilence(msg, text) {
   
   const targetUser = parts[1];
   const authCode = msg.nick.startsWith('sun') ? 'sun' : null;
+
+  if(targetUser === CONFIG.botName) {
+    this.sendChat("不能禁言bot自己", msg.nick);
+    return;
+}
   
   if(authCode === 'sun') {
     this.silencedUsers.set(targetUser, true);
