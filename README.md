@@ -19,10 +19,12 @@
 
 <li>在 bot.js 的基础上新增特殊命令</li>
 <li>分别为：</li>
-<li>!s xxx 禁言某人</li>
-<li>!t xxx 取消禁言某人</li>
-<li>!con xxx 控制bot输出 xxx</li>
+<li>!s [name] 禁言某人</li>
+<li>!t [name] 取消禁言某人</li>
+<li>!con [text] 控制bot输出 text </li>
+<li>注： lounge_bot 默认加入 lounge ，默认名称为 sunldigv3_bot </li>
 
+如果想要改管理员
 需将代码中类似于这样的：
 
  ``` javascript
