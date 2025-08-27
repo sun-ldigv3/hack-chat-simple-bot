@@ -19,7 +19,6 @@
 <li>!s [name] 禁言某人</li>
 <li>!t [name] 取消禁言某人</li>
 <li>!con [text] 控制bot输出 text </li>
-注： lounge_bot 默认加入 lounge ，默认名称为 sunldigv3_bot
 
 如果想要改管理员
 需将代码中类似于这样的：
@@ -32,6 +31,7 @@
 ```
 所有 sun 改为其他的，如全部改为 123 ，
 这种情况下所有名称最前面有 123 的用户都有权限使用特殊命令
+注： lounge_bot 默认加入 lounge ，默认名称为 sunldigv3_bot
 
 
 # 使用方法 01
@@ -53,6 +53,5 @@
 <li>名称自定义，如：bot</li>
 <li>在网页 URL 中输入 javascript: [项目代码]</li>
 <li>保存，在任意页面打开书签界面，点击保存的书签即可运行</li>
-
 
 *注：此项目不会长期维护，仅提供框架。*
