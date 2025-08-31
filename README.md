@@ -6,6 +6,7 @@
 2. lounge_bot 这是一个在 bot.js 的基础上拥有特殊命令的版本，提供身份认证
 3. sunldigv3_bot 这是一个文件夹，包括前端代码与后端代码，功能与 lounge_bot 相同，但有图形化界面
 4. Evil_bot 这是一个基于 bot 的邪恶版本，加入房间随机名称，用 !wtf 可以刷屏
+5. lounge_bot_new 这是一个基于 lounge_bot 的版本，具体更新可查看代码，功能更丰富
 
 # bot.js 功能：
 <li>!help - 显示所有可用命令说明</li>
